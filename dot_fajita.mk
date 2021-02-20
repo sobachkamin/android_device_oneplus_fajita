@@ -21,10 +21,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from fajita device
 $(call inherit-product, device/oneplus/fajita/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common DotOS stuff.
+$(call inherit-product, vendor/dot/config/common.mk)
 
-PRODUCT_NAME := lineage_fajita
+# Bootanimation Resolution
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Face unlock
+TARGET_USES_FACE_UNLOCK := true
+
+PRODUCT_NAME := dot_fajita
 PRODUCT_DEVICE := fajita
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
